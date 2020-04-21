@@ -1,4 +1,6 @@
-## Android 
+- [ ] Guava 缓存的使用
+
+## Android
 
 领域划分：
 
@@ -31,29 +33,26 @@ Java技术清单：
 4. 线程池
 5. JVM
 6. 序列化
-6. OOP -> AOP
+6. OOP -\> AOP
 6. IoC Inversion of Control 控制反转，面向对象编程的设计原则，常见的方式叫做依赖注入DI Dependency Injection，还有一种方式依赖查找 Dependency Lookup
 
-https://blog.csdn.net/whale_kyle/article/details/91049282?depth_1-utm_source=distribute.pc_relevant.none-task&utm_source=distribute.pc_relevant.none-task
+https://blog.csdn.net/whale\_kyle/article/details/91049282?depth\_1-utm\_source=distribute.pc\_relevant.none-task&utm\_source=distribute.pc\_relevant.none-task
 
 Android 技术清单：
 
 1. OS体系结构，平台机制，进程管理机制，任务管理机制
+2. 熟悉Android底层框架原理 （了解Linux操作系统、JVM、Native层核心原理； 对系统级 CPU/GPU/内存/网络 等原理有深入了解）
 2. 四大组件知识体系，生命周期、任务栈、启动模式、Fragment、Service
 2. 系统服务，AMS、PMS、WMS、Android虚拟机
-2. UI，事件传递分发、自定义View、动画等
-2. IPC，进程间通信（Socket、Binder、AIDL、Messenager、ContentProvider）
+3. IPC，进程间通信（Socket、Binder、AIDL、Messenager、ContentProvider），应用AMS、PMS等
 3. 消息机制，Handler、Looper、MessageQueue
 4. 多线程，并发、锁、线程（AsyncTask、HandlerThread、IntentService）、线程池（ThreadPoolExecutor）
+5. UI，事件传递分发、View绘制流程、自定义View、动画等
 6. 适配，UI适配、Android版本差异化适配（权限）、机型适配
 7. 网络编程，http/https、socket（对TCP/IP协议的封装，本身不是协议，而是一个调用接口API）https://www.jianshu.com/p/6676ddf97eb8
 8. 数据库
-9. 缓存，LRU，图片加载
+9. 缓存，LRU，图片缓存 / 网络缓存 / 本地缓存 
 9. json/xml
-6. 蓝牙
-7. 音视频处理
-8. JNI / NDK
-9. 安全，混淆/反混淆、加固/脱壳、反编译、加解密、dex/elf/smali、Xposed/Frida/Cydia
 10. 第三库的使用，okhttp、rxjava、glide、自建库上传jcenter
 11. Gradle构建及编译
 12. 跨平台，RN、Flutter
@@ -61,7 +60,10 @@ Android 技术清单：
 15. 组件化、插件化、热修复
 16. 测试，单元测试（Junit），UI自动化测试工具（Monkey随机、Instrumentation早期、UiAutomator、Robotium、Espresso）、工具（Appium、postman、charles） https://www.jianshu.com/p/2abcf1e312ec
 17. 调试，log开发习惯、debug断点、adb shell dumpsys、手机开发者模式（严苛模式StrictMode）
-18. 调优，应用优化（内存、ANR、启动时间、流畅度）、底层优化（framework、HAL、Kernel、filesystem、network）、监控系统、工具（MAT、LeakMemory，https://blog.csdn.net/qq_16206535/article/details/80307612）
+18. 调优，应用优化（内存、ANR、启动时间、流畅度、包体积）、底层优化（framework、HAL、Kernel、filesystem、network）、监控系统、工具（profile、SysTrace、TraceView、MAT、LeakMemory，https://blog.csdn.net/qq\_16206535/article/details/80307612）
+8. JNI / NDK；（蓝牙开发、摄像头）
+7. 音视频处理，流媒体分发调度以及传输协议
+9. 安全，混淆/反混淆、加固/脱壳、反编译、加解密、dex/elf/smali、Xposed/Frida/Cydia、后门注入Metasploit
 
 工具：
 
@@ -71,7 +73,7 @@ Android 技术清单：
 
 其他：
 
-1. [REST接口](https://www.runoob.com/w3cnote/restful-architecture.html)
+1. [REST接口][1]
 
 
 
@@ -80,13 +82,11 @@ Operation code 操作码 / operand 操作数 都是二进制
 LD A, 01H 其中 LD代表加载的指令，A代表内部的存储器A，01 操作数， H代表十六进制
  
 
-[1]:	https://github.com/jwasham/coding-interview-university/blob/master/translations/README-cn.md#%E8%BF%99%E6%98%AF
-
-
 ## 参考资料
 
-[一份来自亚马逊工程师的Google面试指南](https://mp.weixin.qq.com/s/0omyRAAUk4G5NLHIzrgmyA)
-[技术面试必备知识](https://github.com/CyC2018/CS-Notes)
+[一份来自亚马逊工程师的Google面试指南][2]
+[技术面试必备知识][3]
+https://github.com/CyC2018/CS-Notes
 https://github.com/HIT-Alibaba/interview
 https://github.com/Moosphan/Android-Daily-Interview
 https://github.com/AweiLoveAndroid/CommonDevKnowledge
@@ -95,6 +95,15 @@ https://github.com/JsonChao/Awesome-Android-Interview
 https://github.com/stormzhang/android-interview-questions-cn
 https://github.com/sucese/android-interview-guide
 https://hit-alibaba.github.io/interview/index.html
+
+[Github CS-Notes](https://github.com/CyC2018/CS-Notes/blob/master/notes/Java%20%E5%B9%B6%E5%8F%91.md)
+[Android面试相关文章以及github整理](https://mp.weixin.qq.com/s/CQABJNacnsf8_s6l93JKUw)
+[Android 知识体系脑图「android篇」](https://juejin.im/entry/5adf719e6fb9a07ab773db0f)
+[Android 知识体系脑图「java篇」](https://juejin.im/entry/5ab9343b6fb9a028df229ff4)
+
+[国内一线互联网公司内部面试题库](https://jackyandroid.github.io/AndroidInterview-Q-A/interview/)
+
+
 
 ---
 ---
@@ -151,34 +160,29 @@ MySQL两种：行级锁和表级锁
 
 1. 读写锁
 
-    互斥锁，Exclusive，X锁，写锁
-    共享锁，Shared，S锁，读锁
-    
-    * 加了 X 锁，可以读取和更新，加锁期间其他事务**不能对 A 加任何锁**
-    * 加了 S 锁，可以读取，不可更新，加锁期间**能对 A 加 S 锁，不能加 X 锁**。
-    
+	互斥锁，Exclusive，X锁，写锁
+	共享锁，Shared，S锁，读锁
+	* 加了 X 锁，可以读取和更新，加锁期间其他事务**不能对 A 加任何锁**
+	* 加了 S 锁，可以读取，不可更新，加锁期间**能对 A 加 S 锁，不能加 X 锁**。
 2. 意向锁
 
-    Intention Locks，属于表级锁，在原来的 X/S 锁之上引入了 IX/IS。
-    
-    * 一个事务在获取某个数据 **行对象的 S 锁**之前，必须获取 **表的IS 锁** 或 **更强的锁**
-    * 一个事务在获取某个数据 **行对象的X锁** 之前，必须先获得 **表的IX锁**
-    
+	Intention Locks，属于表级锁，在原来的 X/S 锁之上引入了 IX/IS。
+	* 一个事务在获取某个数据 **行对象的 S 锁**之前，必须获取 **表的IS 锁** 或 **更强的锁**
+	* 一个事务在获取某个数据 **行对象的X锁** 之前，必须先获得 **表的IX锁**
 3. 兼容关系
-    
-      | X锁 | S锁
-    --- | --- | ---
-    X锁 | x | x
-    S锁 | x | 
+	  | X锁 | S锁
+	--- | --- | ---
+	X锁 | x | x
+	S锁 | x | 
 
 
 
-     | X锁 | IX锁 | S锁 | IS锁
-    --- | --- | --- | --- | ---
-    X锁 | x | x | x | x
-    IX锁 | x |  | x | 
-    S锁 | x | x |
-    IS锁 | x |
+	 | X锁 | IX锁 | S锁 | IS锁
+	--- | --- | --- | --- | ---
+	X锁 | x | x | x | x
+	IX锁 | x |  | x | 
+	S锁 | x | x |
+	IS锁 | x |
 
 #### 3.3 封锁协议
 
@@ -186,21 +190,19 @@ MySQL两种：行级锁和表级锁
 
 * 一级
 
-    事务 T 修改数据 A 必须加 X 锁，直到 **T 结束**才释放 X 锁
+	事务 T 修改数据 A 必须加 X 锁，直到 **T 结束**才释放 X 锁
 
-    解决：丢失修改问题
+	解决：丢失修改问题
 
 * 二级
 
-    在一级基础上，要求读取 A 时必须加 S 锁，**读取完**马上释放 S 锁
-    
-    解决：读取脏数据问题
+	在一级基础上，要求读取 A 时必须加 S 锁，**读取完**马上释放 S 锁
+	解决：读取脏数据问题
 
 * 三级
 
-    在二级的基础上，要求读取数据 A 时必须加 S 锁，直到**事务结束**了才能释放 S 锁。
-    
-    解决：不可重复读问题。
+	在二级的基础上，要求读取数据 A 时必须加 S 锁，直到**事务结束**了才能释放 S 锁。
+	解决：不可重复读问题。
 
 ##### 3.3.2 两段锁协议
 
@@ -273,16 +275,16 @@ SELECT ... FOR UPDATE;
 
 在 MVCC 中事务的修改操作（DELETE、INSERT、UPDATE）会为数据行新增一个版本快照。
 
-**脏读 和 不可重复读 _最根本的原因_是事务读取到其它事务未提交的修改。**在事务进行读取操作时，为了解决脏读和不可重复读问题，MVCC 规定只能读取已经提交的快照。当然一个事务可以读取自身未提交的快照，这不算是脏读。
+**脏读 和 不可重复读 \_最根本的原因\_是事务读取到其它事务未提交的修改。**在事务进行读取操作时，为了解决脏读和不可重复读问题，MVCC 规定只能读取已经提交的快照。当然一个事务可以读取自身未提交的快照，这不算是脏读。
 
 #### 5.2 版本号
 
-* **系统版本号 SYS_ID**：是一个递增的数字，每开始一个新的事务，系统版本号就会自动递增。
-* **事务版本号 TRX_ID** ：事务开始时的系统版本号。
+* **系统版本号 SYS\_ID**：是一个递增的数字，每开始一个新的事务，系统版本号就会自动递增。
+* **事务版本号 TRX\_ID** ：事务开始时的系统版本号。
 
 #### 5.3 Undo 日志
 
-MVCC 的多版本指的是多个版本的快照，快照存储在 Undo 日志中，该日志通过回滚指针 ROLL_PTR 把一个数据行的所有快照连接起来。
+MVCC 的多版本指的是多个版本的快照，快照存储在 Undo 日志中，该日志通过回滚指针 ROLL\_PTR 把一个数据行的所有快照连接起来。
 
 例如在 MySQL 创建一个表 t，包含主键 id 和一个字段 x。我们先插入一个数据行，然后对该数据行执行两次更新操作。
 
@@ -292,28 +294,28 @@ UPDATE t SET x="b" WHERE id=1;
 UPDATE t SET x="c" WHERE id=1;
 ```
 
-因为没有使用 START TRANSACTION 将上面的操作当成一个事务来执行，根据 MySQL 的 AUTOCOMMIT 机制，每个操作都会被当成一个事务来执行，所以上面的操作总共涉及到三个事务。快照中除了记录事务版本号 TRX_ID 和操作之外，还记录了一个 bit 的 DEL 字段，用于标记是否被删除。
+因为没有使用 START TRANSACTION 将上面的操作当成一个事务来执行，根据 MySQL 的 AUTOCOMMIT 机制，每个操作都会被当成一个事务来执行，所以上面的操作总共涉及到三个事务。快照中除了记录事务版本号 TRX\_ID 和操作之外，还记录了一个 bit 的 DEL 字段，用于标记是否被删除。
 
-INSERT、UPDATE、DELETE 操作会创建一个日志，并将事务版本号 TRX_ID 写入。DELETE 可以看成是一个特殊的 UPDATE，还会额外将 DEL 字段设置为 1。
+INSERT、UPDATE、DELETE 操作会创建一个日志，并将事务版本号 TRX\_ID 写入。DELETE 可以看成是一个特殊的 UPDATE，还会额外将 DEL 字段设置为 1。
 
 #### 5.4 ReadView
 
 MVCC 维护了一个 **ReadView 结构**：
-1. 当前系统未提交的事务列表 **TRX_IDs** {TRX_ID_1, TRX_ID_2, ...}
-2. 该列表的最小值 **TRX_ID_MIN** 
-3. 该列表的最大值 **TRX_ID_MAX**
+1. 当前系统未提交的事务列表 **TRX\_IDs** {TRX\_ID\_1, TRX\_ID\_2, ...}
+2. 该列表的最小值 **TRX\_ID\_MIN** 
+3. 该列表的最大值 **TRX\_ID\_MAX**
 
-**在进行 SELECT 操作时**，根据数据行快照的 TRX_ID 与 TRX_ID_MIN 和 TRX_ID_MAX 之间的关系，从而判断数据行快照是否可以使用：
+**在进行 SELECT 操作时**，根据数据行快照的 TRX\_ID 与 TRX\_ID\_MIN 和 TRX\_ID\_MAX 之间的关系，从而判断数据行快照是否可以使用：
 
-* **TRX_ID < TRX_ID_MIN** 时，表示该数据行快照时在当前所有未提交事务之前进行更改的，因此**可以使用**。
+* **TRX\_ID \< TRX\_ID\_MIN** 时，表示该数据行快照时在当前所有未提交事务之前进行更改的，因此**可以使用**。
 
-* **TRX_ID > TRX_ID_MAX** 时，表示该数据行快照是在事务启动之后被更改的，因此**不可使用**。
+* **TRX\_ID \> TRX\_ID\_MAX** 时，表示该数据行快照是在事务启动之后被更改的，因此**不可使用**。
 
-* **TRX_ID_MIN <= TRX_ID <= TRX_ID_MAX** 时，需要根据隔离级别再进行判断：
-    * 提交读：如果 TRX_ID 在 TRX_IDs 列表中，表示该数据行快照对应的事务还未提交，则该快照不可使用。否则表示已经提交，可以使用。
-    * 可重复读：都不可以使用。因为如果可以使用的话，那么其它事务也可以读到这个数据行快照并进行修改，那么当前事务再去读这个数据行得到的值就会发生改变，也就是出现了不可重复读问题。
+* **TRX\_ID\_MIN \<= TRX\_ID \<= TRX\_ID\_MAX** 时，需要根据隔离级别再进行判断：
+	* 提交读：如果 TRX\_ID 在 TRX\_IDs 列表中，表示该数据行快照对应的事务还未提交，则该快照不可使用。否则表示已经提交，可以使用。
+	* 可重复读：都不可以使用。因为如果可以使用的话，那么其它事务也可以读到这个数据行快照并进行修改，那么当前事务再去读这个数据行得到的值就会发生改变，也就是出现了不可重复读问题。
 
-在数据行快照不可使用的情况下，需要沿着 Undo Log 的回滚指针 ROLL_PTR 找到下一个快照，再进行上面的判断。
+在数据行快照不可使用的情况下，需要沿着 Undo Log 的回滚指针 ROLL\_PTR 找到下一个快照，再进行上面的判断。
 
 
 #### 5.5 快照读 与 当前读
@@ -380,13 +382,13 @@ SELECT c FROM t WHERE c BETWEEN 10 and 20 FOR UPDATE;
 
 #### 7.1 函数依赖
 
-记 A->B 表示 A 函数决定 B，也可以说 B 函数依赖于 A。
+记 A-\>B 表示 A 函数决定 B，也可以说 B 函数依赖于 A。
 
 如果 {A1，A2，... ，An} 是关系的一个或多个属性的集合，该集合函数决定了关系的其它所有属性并且是最小的，那么该集合就称为键码。
 
-对于 A->B，如果能找到 A 的真子集 A'，使得 A'-> B，那么 A->B 就是部分函数依赖，否则就是完全函数依赖。
+对于 A-\>B，如果能找到 A 的真子集 A'，使得 A'-\> B，那么 A-\>B 就是部分函数依赖，否则就是完全函数依赖。
 
-对于 A->B，B->C，则 A->C 是一个传递函数依赖。
+对于 A-\>B，B-\>C，则 A-\>C 是一个传递函数依赖。
 
 
 #### 7.2 异常
@@ -407,15 +409,15 @@ SELECT c FROM t WHERE c BETWEEN 10 and 20 FOR UPDATE;
 
 1. 第一范式 (1NF)
 
-    属性不可分。
+	属性不可分。
 
 2. 第二范式 (2NF)
 
-    每个非主属性完全函数依赖于键码。
+	每个非主属性完全函数依赖于键码。
 
 3. 第三范式 (3NF)
 
-    非主属性不传递函数依赖于键码。
+	非主属性不传递函数依赖于键码。
 
 ### 8 ER 图
 
@@ -446,7 +448,7 @@ Entity-Relationship
 
 ## 缓存
 
-[缓存](https://github.com/CyC2018/CS-Notes/blob/master/notes/缓存.md) [缓存那些事](https://tech.meituan.com/2017/03/17/cache-about.html) [一致性哈希算法](https://my.oschina.net/jayhu/blog/732849)
+[缓存][4] [缓存那些事][5] [一致性哈希算法][6]
 
 互联网应用的整体流程：
 
@@ -484,22 +486,20 @@ Entity-Relationship
 
 * FIFO(first in first out)
 
-    先进入的优先清理
-    
+	先进入的优先清理
 * LFU(less frequently used)
 
-    最少使用，根据 **被使用次数** 判断
+	最少使用，根据 **被使用次数** 判断
 
 * LRU(least recently used)
 
-    最近最少使用，根据 **最后一次使用的时间** 判断
+	最近最少使用，根据 **最后一次使用的时间** 判断
 
 * 其他简单策略
-    * 根据过期时间，清理过期时间最长的元素
-    * 根据过期时间，清理最近要过期的元素
-    * 根据关键字长短清理
-    * 随机清理
-   
+	* 根据过期时间，清理过期时间最长的元素
+	* 根据过期时间，清理最近要过期的元素
+	* 根据关键字长短清理
+	* 随机清理
 ### 3 缓存分类
 
 虽然从硬件介质上来看，无非是内存和硬盘两种，但从技术上，可以分为内存、硬盘文件、数据库。
@@ -511,37 +511,34 @@ Entity-Relationship
 在目前的应用服务框架中，比较常见的，是根据缓存于应用的藕合度，分为：
 
 * **local cache（本地缓存）** 
-    
-    **是在应用中的缓存组件。**
-    
-    **优点**：是应用和cache是在同一个进程内部，请求缓存非常快速，没有过多的网络开销等，在单应用不需要集群支持或者集群情况下各节点无需互相通知的场景下使用本地缓存较合适；
-    **缺点**：因为缓存跟应用程序耦合，多个应用程序无法直接的共享缓存，各应用或集群的各节点都需要维护自己的单独缓存，对内存是一种浪费。
+	**是在应用中的缓存组件。**
+	**优点**：是应用和cache是在同一个进程内部，请求缓存非常快速，没有过多的网络开销等，在单应用不需要集群支持或者集群情况下各节点无需互相通知的场景下使用本地缓存较合适；
+	**缺点**：因为缓存跟应用程序耦合，多个应用程序无法直接的共享缓存，各应用或集群的各节点都需要维护自己的单独缓存，对内存是一种浪费。
 
 *  **remote cache（分布式缓存）**
 
    **是与应用分离的缓存组件或服务**
-   
    **优点**：自身就是一个独立的应用，与本地应用隔离，多个应用可直接的共享缓存。
 
 #### 3.1 实现
 
 * 本地缓存
-    * 编程直接实现
-        * 成员变量或局部变量
-        * 静态变量
-    * Ehcache（服务端）
-    * Guava Cache（服务端）   
+	* 编程直接实现
+		* 成员变量或局部变量
+		* 静态变量
+	* Ehcache（服务端）
+	* Guava Cache  
 * 分布式缓存
-    * memcached（服务端）
-    * Redis（服务端）
-    * Spring注解缓存
+	* memcached（服务端）
+	* Redis（服务端）
+	* Spring注解缓存
 
 ### 4 缓存位置
 
 根据互联网产品的整体过程，每个层级都可以缓存。
 
 1. **浏览器 / App；** 用户本地缓存
-2. **网络服务提供商；** [ISP CDN](http://dy.163.com/v2/article/detail/D9AOMRPR0511AULS.html) 网络访问第一跳，缓存在此
+2. **网络服务提供商；** [ISP CDN][7] 网络访问第一跳，缓存在此
 3. **反向代理；** 位于服务器之前，缓存在此
 4. **本地缓存；** 服务器本地缓存，如使用 Guava Cache
 5. **分布式缓存；**服务器分布式缓存，如使用 Redis
@@ -620,5 +617,41 @@ public class LRU<K, V> implements Iterable<K> {
 
 ---
 ---
+
+
+[1]:	https://www.runoob.com/w3cnote/restful-architecture.html
+[2]:	https://mp.weixin.qq.com/s/0omyRAAUk4G5NLHIzrgmyA
+[3]:	https://github.com/CyC2018/CS-Notes
+[4]:	https://github.com/CyC2018/CS-Notes/blob/master/notes/%E7%BC%93%E5%AD%98.md
+[5]:	https://tech.meituan.com/2017/03/17/cache-about.html
+[6]:	https://my.oschina.net/jayhu/blog/732849
+[7]:	http://dy.163.com/v2/article/detail/D9AOMRPR0511AULS.html
+
+---
+---
+
+## Java内存模型
+
+### 1 基础
+
+#### 1.1 并发编程模型的分类
+
+#### 1.2 Java内存模型的抽象
+
+#### 1.3 重排序
+
+#### 1.4 volatile
+
+1. 可见性；对一个volatile变量的读，总能看到任意线程对这个volatile变量最后的写入。
+2. 原子性；单个volatile变量具有原子性，多个或复合操作整体上不具有原子性。
+
+
+#### 1.5 锁
+
+java并发编程的重要同步机制。
+
+1. 临界区互斥执行
+2. 让释放锁的线程 向获取同一个锁的线程发送消息
+
 
 

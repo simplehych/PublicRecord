@@ -1,5 +1,7 @@
 - [ ] Guava 缓存的使用
 
+[移动开发：如果没做好这些准备及面试题，找工作还是先缓缓吧](https://www.jianshu.com/p/02ecfa0a3bbc)
+
 ## Android
 
 领域划分：

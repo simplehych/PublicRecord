@@ -1,3 +1,7 @@
+## Context
+创建时机 Application 和 Activity
+上述二者的区别，与视图有关的用 Activity
+
 ## Activity
 
 1. 生命周期
@@ -210,6 +214,77 @@ Inter-Process Communication
 Bundle、文件共享、AIDL、Messenger、ContentProvider、Socket、广播
 
 ## [Handler](https://www.yuque.com/docs/share/0adad94b-b20c-437d-a1fc-f8d329517f37?#)
+
+存在背景：
+1. 主线程不能执行耗时操作
+2. 子线程不能更新 UI（控件非线性安全，锁耗时，逻辑复杂）
+
+
+laucher -> Zygote -> forkProcess -> ActivityThread.main -> Looper.prepareMainLooper -> attach() 与 AMS 绑定 ApplicationThread Binder线程池 -> Looper.loop()
+
+
+主要 API：
+
+
+
+Handler <-- Looper
+Looper <-- MessageQueue, ThreadLocal
+
+Looper.loop()
+```
+# Looper
+public static void loop() {
+    final Looper me = myLooper();
+    for(;;) {
+        Message msg = me.mQueue.next()
+        msg.target.dispatchMessage(msg);
+    }
+}    
+```
+
+MessageQueue.next()
+
+```
+# MessageQueue
+Message next() {
+    for(;;){
+        nativePollOnce(ptr, nextPollTimeoutMillis);
+        return msg;
+        return null;
+    }
+}
+```
+Handler.postMessage -> sendMessage -> MessageQueue.enqueueMessage
+```
+boolean enqueueMessage(Message msg, long when) {
+    // 根据 when 排队列
+    when < p.when
+    ... 
+}
+
+```
+
+Message.what / arg1 / arg2 / when / target
+
+
+线程使用消息机制前提
+1. 创建 Looper.prepare()，内部创建了MessageQueue，并和当前线程绑定
+2. 开启循环 Looper.loop()
+
+Handler 处理消息靠 dispatchMessage，内部有三种处理消息方式优先级依次为：
+1. message 中的设置的 Callback，msg.callback
+2. 实例化 new Handle(Callback)
+3. Handler 重写的 handleMessage() 方法
+4. 原理 
+5. Handler、Thread、HandlerThread 区别
+6. 子线程使用方式
+7. 主线程的动力
+8. 内存泄漏
+9. Looper 死循环没有阻塞的原因
+
+
+
+使用：Messenger，HandlerThread
 
 
 ## 性能优化

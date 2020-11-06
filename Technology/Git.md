@@ -255,11 +255,14 @@ $ cat .gitignore
 
 #### 提交更新 `git  commit`
 每次准备提交前，先用 `git status` 看下，是不是都已暂存起来了， 然后再运行提交命令.
- ```
+
+```
 $ git commit
 ```
+
 这种方式会启动文本编辑器以便输入本次提交的说明。(一般都是 vim 或 emacs,使用 git config --global core.editor 命令设定你喜欢的编辑软件)
 编辑器会显示类似下面的文本信息
+
 ```
 
 # Please enter the commit message for your changes. Lines starting
@@ -274,12 +277,14 @@ $ git commit
 ~
 ".git/COMMIT_EDITMSG" 9L, 283C
 ```
+
 1. 默认的提交消息包含最后一次运行 git status 的输出，放在注释行里
 2. 另外开头还有一空行，供你输入提交说明。
 3. 如果想要更详细的对修改了哪些内容的提示，可以用 `git  commit -v` ，这会将你所做的改变的 diff 输出放到编辑器中从而使你知道本次提交具体做了哪些修改。
 4. 退出编辑器时，Git 会丢掉注释行，用你输入提交附带信息生成一次提交。
 
 另外：你也可以在 `commit` 命令后添加 `-m` 选项，将提交信息与命令放在同一行，如下所示：
+
 ```
 $ git commit -m "Story 182: Fix benchmarks for speed"
 
@@ -287,6 +292,7 @@ $ git commit -m "Story 182: Fix benchmarks for speed"
  2 files changed, 2 insertions(+)
  create mode 100644 README
 ```
+
 提交后它会告诉你：
 1. 当前是在哪个分支（master）提交的
 2. 本次提交的完整 SHA-1 校验和是什么（463dc4f）
@@ -298,6 +304,7 @@ $ git commit -m "Story 182: Fix benchmarks for speed"
 尽管使用暂存区域的方式可以精心准备要提交的细节，但有时候这么做略显繁琐。
 
 Git 提供了一个跳过使用暂存区域的方式， 只要在提交的时候，给 `git commit `加上 `-a` 选项，Git 就会自动把所有已经跟踪过的文件暂存起来一并提交，从而跳过 `git add` 步骤：
+
 ```
 $ git commit -a -m 'added new benchmarks'
 >经验证，当有未跟踪的文件时，使用失败
